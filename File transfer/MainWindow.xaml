@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:File_transfer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="284" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="Transfer" Content="Transfer!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="674,29,0,0" Height="30"/>
-        <Button x:Name="Select_file" Content="Select file" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="10,29,0,0" Height="30" Click="Select_file_Click"/>
-        <Button x:Name="Destination" Content="Destination" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="125,29,0,0" Height="30" Click="Destination_Click"/>
-        <Label x:Name="Current_file" Content="Label" VerticalAlignment="Top" Margin="10,64,10,0" Height="347" BorderThickness="2,0,0,0"/>
-        <Label x:Name="Destination_label" Content="Destination" VerticalAlignment="Top" Margin="240,29,125,0" Height="30" BorderThickness="2,0,0,0"/>
+        <Button x:Name="Transfer" Content="Transfer!" VerticalAlignment="Top" Margin="674,29,10,0" Height="30"/>
+        <Button x:Name="Select_file" Content="Select file" VerticalAlignment="Top" Margin="10,29,674,0" Height="30" Click="Select_file_Click"/>
+        <Button x:Name="Destination" Content="Check and set destination" VerticalAlignment="Top" Margin="462,29,125,0" Height="30" Click="Destination_Click"/>
+        <Label x:Name="Current_file_title" Content="Selected file" Margin="372,64,10,140" BorderThickness="2,0,0,0" VerticalContentAlignment="Bottom"/>
+        <Label x:Name="Current_file" Content="" Margin="372,115,10,10" BorderThickness="2,0,0,0"/>
+        <Label x:Name="Destination_label_title" Content="Destination check results" Margin="10,64,462,140" BorderThickness="2,0,0,0" VerticalContentAlignment="Bottom"/>
+        <Label x:Name="Destination_label" Content="IP destination:" VerticalAlignment="Top" Margin="149,29,542,0" Height="30" BorderThickness="2,0,0,0" RenderTransformOrigin="0.495,0.533" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="Scan_results" Content="" Margin="10,115,462,10"/>
+        <TextBox x:Name="A_IP" Height="30" Margin="257,29,487,0" TextWrapping="Wrap" Text="192" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AllowDrop="False"/>
+        <TextBox x:Name="B_IP" Height="30" Margin="307,29,437,0" TextWrapping="Wrap" Text="168" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AllowDrop="False"/>
+        <TextBox x:Name="C_IP" Height="30" Margin="357,29,387,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AllowDrop="False"/>
+        <TextBox x:Name="D_IP" Height="30" Margin="407,29,337,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" AllowDrop="False"/>
 
     </Grid>
 </Window>

@@ -65,7 +65,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Code\file_selector.cs" />
+    <Compile Include="Code\ip_checker.cs" />
     <Compile Include="Code\lan_scaner.cs" />
+    <Compile Include="Code\server_side.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

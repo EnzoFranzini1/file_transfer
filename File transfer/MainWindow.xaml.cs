@@ -23,12 +23,14 @@ namespace File_transfer
     {
         file_selector _file_sel;
         lan_scaner _lan_scan;
+        ip_checker _ip_check;
 
         public MainWindow()
         {
             InitializeComponent();
             _file_sel = new file_selector();
             _lan_scan = new lan_scaner();
+            _ip_check = new ip_checker();
         }
 
         private void Select_file_Click(object sender, RoutedEventArgs e)
@@ -38,7 +40,7 @@ namespace File_transfer
 
         private void Destination_Click(object sender, RoutedEventArgs e)
         {
-            _lan_scan.scan_lan_ip();
+            _ip_check.check_ip_input();
         }
     }
 }
