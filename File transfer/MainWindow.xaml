@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="284" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="Transfer" Content="Transfer!" VerticalAlignment="Top" Margin="674,29,10,0" Height="30"/>
+        <Button x:Name="Transfer" Content="Transfer!" VerticalAlignment="Top" Margin="674,29,10,0" Height="30" Click="Transfer_Click"/>
         <Button x:Name="Select_file" Content="Select file" VerticalAlignment="Top" Margin="10,29,674,0" Height="30" Click="Select_file_Click"/>
         <Button x:Name="Destination" Content="Check and set destination" VerticalAlignment="Top" Margin="462,29,125,0" Height="30" Click="Destination_Click"/>
         <Label x:Name="Current_file_title" Content="Selected file" Margin="372,64,10,140" BorderThickness="2,0,0,0" VerticalContentAlignment="Bottom"/>

@@ -24,6 +24,7 @@ namespace File_transfer
         file_selector _file_sel;
         lan_scaner _lan_scan;
         ip_checker _ip_check;
+        emitter _emitter;
 
         public MainWindow()
         {
@@ -31,6 +32,7 @@ namespace File_transfer
             _file_sel = new file_selector();
             _lan_scan = new lan_scaner();
             _ip_check = new ip_checker();
+            _emitter = new emitter();
         }
 
         private void Select_file_Click(object sender, RoutedEventArgs e)
@@ -41,6 +43,11 @@ namespace File_transfer
         private void Destination_Click(object sender, RoutedEventArgs e)
         {
             _ip_check.check_ip_input();
+        }
+
+        private void Transfer_Click(object sender, RoutedEventArgs e)
+        {
+            _emitter.Send_file();
         }
     }
 }

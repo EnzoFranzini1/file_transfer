@@ -11,6 +11,7 @@ namespace File_transfer
     public class file_selector
     {
         MainWindow wnd = (MainWindow)Application.Current.MainWindow;
+        public string file_full_path;
 
         public void Open_FileDialog()
         {
@@ -27,6 +28,7 @@ namespace File_transfer
             if (result == true)
             {
                 wnd.Current_file.Content = " - " + Path.GetFileName(File_Dialog.FileName.ToString());
+                file_full_path = Path.GetFullPath(File_Dialog.FileName);
             }
 
         }

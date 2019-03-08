@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Code\emitter.cs" />
     <Compile Include="Code\file_selector.cs" />
     <Compile Include="Code\ip_checker.cs" />
     <Compile Include="Code\lan_scaner.cs" />

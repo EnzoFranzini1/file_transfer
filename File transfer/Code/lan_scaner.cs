@@ -16,6 +16,8 @@ namespace File_transfer
     {
         MainWindow wnd = (MainWindow)Application.Current.MainWindow;
 
+        public string Ip_destino, Host_Name;
+
         public void scan()
         {
 
@@ -26,7 +28,8 @@ namespace File_transfer
 
             myPing = new Ping();
 
-            string Ip_destino = wnd.A_IP.Text.ToString() + "." + wnd.B_IP.Text.ToString() + "." + wnd.C_IP.Text.ToString() + "." + wnd.D_IP.Text.ToString();
+            Ip_destino = wnd.A_IP.Text.ToString() + "." + wnd.B_IP.Text.ToString() + "." + wnd.C_IP.Text.ToString() + "." + wnd.D_IP.Text.ToString();
+
 
             try
             {
@@ -57,6 +60,8 @@ namespace File_transfer
                     {
                         entry = Dns.GetHostEntry(Ip_destino);
                         wnd.Scan_results.Content = "Host name: " + entry.HostName.ToString() + "\nIp adress: " + Ip_destino.ToString() + "" + "\nStatus: Sucessfull ping\n\n";
+                        Host_Name = entry.HostName.ToString();
+                        Console.WriteLine("||||||||||||||" + Host_Name);
                         wnd.Scan_results.Foreground = System.Windows.Media.Brushes.Green;
                     }
                     catch (Exception ex)

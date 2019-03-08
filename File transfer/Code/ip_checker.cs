@@ -14,10 +14,7 @@ namespace File_transfer
         int A_ip, B_ip, C_ip, D_ip;
 
         public void check_ip_input()
-        {
-
-            wnd.Scan_results.Content = "Wait...";
-            wnd.Scan_results.Foreground = System.Windows.Media.Brushes.Black;
+        {        
 
             if (wnd.A_IP.Text == "" || wnd.A_IP.Text.Length > 3)
             {
